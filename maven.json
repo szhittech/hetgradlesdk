@@ -1,0 +1,50 @@
+{
+    "name": "hetbasicsdk",
+    "group": "com.github.szhittech",
+    "jcenter": {
+        "username": "szhittech",
+        "password": "het123456",
+        "snapshots": "https://oss.sonatype.org/content/repositories/snapshots/",
+        "releaseurl": "https://dl.bintray.com/clife/clife/",
+        "jcenterurl": "https://jcenter.bintray.com/"
+    },
+    "clife": {
+        "snapshots": "https://clife-devops-maven.pkg.coding.net/repository/public-repository/maven-snapshots/",
+        "releaseurl": "https://clife-devops-maven.pkg.coding.net/repository/public-repository/maven-releases/",
+        "publicurl": "http://200.200.200.40:8083/nexus/content/groups/public/"
+    },
+    "docLink": "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/readme.html",
+    "isrelease": 0,
+    "extension": {
+        "configuration": "archives",
+        "sign": false,
+        "signKeyId": "FB58CB54",
+        "signPassword": "2475431305",
+        "signSecertKeyRingFile": "https://clife-devops-generic.pkg.coding.net/app-public/app-config/secring.gpg?version=latest"
+    },
+    "repo": [
+        "http://maven.aliyun.com/nexus/content/groups/public/",
+        "http://200.200.200.40:8083/nexus/content/groups/public/"
+    ],
+    "librariesuri": [],
+    "plugin": {
+        "version": "1.3.4",
+        "forceUpdate": "1",
+        "releasenode": "1.解决Gitee ssl问题;"
+    },
+    "bintray": {
+        "repo": "clife",
+        "packaging": "aar",
+        "siteUrl": "https://github.com/szhittech/pubcode",
+        "gitUrl": "https://github.com/szhittech/pubcode.git",
+        "issueUrl": "https://github.com/szhittech/szhittech/issues",
+        "vcsUrl": "https://github.com/szhittech/pubcode.git",
+        "desc": "Android Library SDK for C-Life",
+        "licenseName": "Apache-2.0",
+        "email": "xiaoli.xia@clife.cn",
+        "dname": "xiaoli.xia",
+        "did": "clife",
+        "bintrayuser": "clife",
+        "bintrayapikey": "afb255973f89db54ab4611d3bd958b56f94ab743"
+    }
+}

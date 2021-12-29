@@ -1,0 +1,55 @@
+{
+    "name": "hetbasicsdk",
+    "group": "com.github.szhittech",
+    "packaging": "aar",
+    "jcenter": {
+        "username": "szhittech",
+        "password": "het123456",
+        "snapshots": "https://oss.sonatype.org/content/repositories/snapshots/",
+        "releaseurl": "https://jcenter.bintray.com/"
+    },
+    "clife": {
+        "username": "clife-android",
+        "password": "add123",
+        "snapshots": "https://clife-devops-maven.pkg.coding.net/repository/public-repository/maven-snapshots/",
+        "releaseurl": "https://clife-devops-maven.pkg.coding.net/repository/public-repository/maven-releases/",
+        "publicurl": "http://200.200.200.40:8083/nexus/content/groups/public"
+    },
+    "docLink": "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/readme.html",
+    "isrelease": 0,
+    "extension": {
+        "configuration": "archives",
+        "sign": true,
+        "signKeyId": "FB58CB54",
+        "signPassword": "2475431305",
+        "signSecertKeyRingFile": "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/maven/signing/secring.gpg"
+    },
+    "repo": [
+        "http://maven.aliyun.com/nexus/content/groups/public/"
+    ],
+    "librariesuri": [
+        "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/hetbasicsdk/library.json",
+        "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/hetbindsdk/library.json",
+        "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/hetmqttsdk/library.json",
+        "http://200.200.200.40/svn/repositories/android/code/trunk/clifepublic/plugindemo/library.json"
+    ],
+    "plugin": {
+        "version": "1.0.6",
+        "releasenode": "\t\r\n1.新增dependence;2.新增JCenter发布"
+    },
+    "bintray": {
+        "repo": "maven",
+        "packaging": "aar",
+        "siteUrl": "https://github.com/szhittech/pubcode",
+        "gitUrl": "https://github.com/szhittech/pubcode.git",
+        "issueUrl": "https://github.com/szhittech/szhittech/issues",
+        "vcsUrl": "https://github.com/szhittech/pubcode.git",
+        "desc": "Android Library SDK for C-Life",
+        "licenseName": "Apache-2.0",
+        "email": "xiaoli.xia@clife.cn",
+        "dname": "xiaoli.xia",
+        "did": "clife",
+        "bintrayuser": "clife",
+        "bintrayapikey": "afb255973f89db54ab4611d3bd958b56f94ab743"
+    }
+}

@@ -1,0 +1,4 @@
+include ':clife-gradle'
+//include ':hetabcsdk'
+//include ':hetxxxsdk'
+//include ':sample'

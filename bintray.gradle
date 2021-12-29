@@ -1,0 +1,70 @@
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+version = "1.1.1-SNAPSHOT"
+group = "com.github.szhittech"
+def proName = "clife-gradle"
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                name proName
+                packaging rootProject.ext.config.POM_PACKAGING
+                description rootProject.ext.config.POM_DESCRIPTION
+                url rootProject.ext.config.POM_URL
+                // Set your license
+                licenses {
+                    license {
+                        name rootProject.ext.config.POM_LICENCE_NAME
+                        url rootProject.ext.config.POM_LICENCE_URL
+                        distribution rootProject.ext.config.POM_LICENCE_DIST
+                    }
+                }
+                developers {
+                    developer {
+                        id rootProject.ext.config.POM_DEVELOPER_ID
+                        name rootProject.ext.config.POM_DEVELOPER_NAME
+                        email rootProject.ext.config.POM_DEVELOPER_EMAIL
+                    }
+                }
+                scm {
+                    url rootProject.ext.config.POM_SCM_URL
+                    connection rootProject.ext.config.POM_SCM_CONNECTION
+                    developerConnection rootProject.ext.config.POM_SCM_DEV_CONNECTION
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+}
+bintray {
+    user = rootProject.ext.config.BINTRAY_USER
+    key = rootProject.ext.config.BINTRAY_APIKEY
+
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = rootProject.ext.libsname["${project.modulename}"]    //发布到JCenter上的项目名字
+        websiteUrl = rootProject.ext.config.POM_LICENCE_URL
+        vcsUrl = rootProject.ext.config.POM_SCM_URL
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
